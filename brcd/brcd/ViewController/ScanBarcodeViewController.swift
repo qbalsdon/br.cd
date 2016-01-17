@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 import AVFoundation
 
 class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    var burstMode = false
+    var group : GroupEntity? = nil
+
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -41,16 +45,17 @@ class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObject
             captureSession.addOutput(metadataOutput)
             
             metadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
-            metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeUPCECode,
+            metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode,
+                AVMetadataObjectTypeCode128Code,
+                AVMetadataObjectTypePDF417Code,
+                AVMetadataObjectTypeAztecCode,
+                
+                AVMetadataObjectTypeUPCECode,
                 AVMetadataObjectTypeCode39Code,
                 AVMetadataObjectTypeCode39Mod43Code,
                 AVMetadataObjectTypeEAN13Code,
                 AVMetadataObjectTypeEAN8Code,
                 AVMetadataObjectTypeCode93Code,
-                AVMetadataObjectTypeCode128Code,
-                AVMetadataObjectTypePDF417Code,
-                AVMetadataObjectTypeQRCode,
-                AVMetadataObjectTypeAztecCode,
                 AVMetadataObjectTypeInterleaved2of5Code,
                 AVMetadataObjectTypeITF14Code,
                 AVMetadataObjectTypeDataMatrixCode
@@ -115,15 +120,30 @@ class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObject
             barcodeCapturedView!.frame = barcodeCapturedRect;
             view.addSubview(barcodeCapturedView!)
         }
-        
         //dismissViewControllerAnimated(true, completion: nil)
     }
     
     func foundCode(code: String, type: String) {
-        showMessage("Scanned code", message: "Found \(code): \(type)", cancelButtonText: "Ok", onComplete: { action in
+        /*showMessage("Scanned code", message: "Found \(code): \(type)", cancelButtonText: "Ok", onComplete: { action in
             self.barcodeCapturedView?.removeFromSuperview()
             self.captureSession.startRunning()
-        })
+        })*/
+        
+        let nCode = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
+        
+        nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
+        nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
+        nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
+        nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
+        
+        CoreDataStackManager.sharedInstance.saveContext()
+        
+        if burstMode {
+            barcodeCapturedView?.removeFromSuperview()
+            captureSession.startRunning()
+        } else {
+            navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {

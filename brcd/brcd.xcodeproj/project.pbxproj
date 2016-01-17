@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561DD4421C4BADB800511F38 /* GroupManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4411C4BADB800511F38 /* GroupManagerTableViewController.swift */; };
+		561DD4441C4BAE9400511F38 /* BarcodeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4431C4BAE9400511F38 /* BarcodeEntity.swift */; };
+		561DD4461C4BAEF800511F38 /* GroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4451C4BAEF800511F38 /* GroupEntity.swift */; };
+		561DD4481C4BB2A100511F38 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4471C4BB2A100511F38 /* CoreDataStackManager.swift */; };
+		561DD44A1C4BD31000511F38 /* GroupTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */; };
+		561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */; };
+		561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DD44D1C4BDE9500511F38 /* Assets.xcassets */; };
+		561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */; };
+		561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DD4561C4C370500511F38 /* QuartzCore.framework */; };
+		561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4591C4C3AFC00511F38 /* iCarousel.m */; };
 		56BE0A2F1C42C017009E62C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A2E1C42C017009E62C2 /* AppDelegate.swift */; };
 		56BE0A341C42C017009E62C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0A321C42C017009E62C2 /* Main.storyboard */; };
 		56BE0A371C42C017009E62C2 /* brcd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A351C42C017009E62C2 /* brcd.xcdatamodeld */; };
-		56BE0A391C42C017009E62C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0A381C42C017009E62C2 /* Assets.xcassets */; };
 		56BE0A3C1C42C017009E62C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0A3A1C42C017009E62C2 /* LaunchScreen.storyboard */; };
 		56BE0A471C42C093009E62C2 /* ScanBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A461C42C093009E62C2 /* ScanBarcodeViewController.swift */; };
 		56BE0A4A1C42CB83009E62C2 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A491C42CB83009E62C2 /* ExtensionUIViewController.swift */; };
@@ -19,11 +28,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		561DD4411C4BADB800511F38 /* GroupManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupManagerTableViewController.swift; path = ViewController/GroupManagerTableViewController.swift; sourceTree = "<group>"; };
+		561DD4431C4BAE9400511F38 /* BarcodeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeEntity.swift; path = Model/BarcodeEntity.swift; sourceTree = "<group>"; };
+		561DD4451C4BAEF800511F38 /* GroupEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupEntity.swift; path = Model/GroupEntity.swift; sourceTree = "<group>"; };
+		561DD4471C4BB2A100511F38 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStackManager.swift; path = Model/CoreDataStackManager.swift; sourceTree = "<group>"; };
+		561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTabBarViewController.swift; path = ViewController/GroupTabBarViewController.swift; sourceTree = "<group>"; };
+		561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeListTableViewController.swift; path = ViewController/BarcodeListTableViewController.swift; sourceTree = "<group>"; };
+		561DD44D1C4BDE9500511F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = brcd/Assets.xcassets; sourceTree = "<group>"; };
+		561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeCarouselViewController.swift; path = ViewController/BarcodeCarouselViewController.swift; sourceTree = "<group>"; };
+		561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "brcd-Bridging-Header.h"; path = "brcd/brcd-Bridging-Header.h"; sourceTree = "<group>"; };
+		561DD4561C4C370500511F38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		561DD4581C4C3AFC00511F38 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = brcd/Frameworks/iCarosel/iCarousel.h; sourceTree = "<group>"; };
+		561DD4591C4C3AFC00511F38 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = brcd/Frameworks/iCarosel/iCarousel.m; sourceTree = "<group>"; };
 		56BE0A2B1C42C017009E62C2 /* brcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BE0A2E1C42C017009E62C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BE0A331C42C017009E62C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56BE0A361C42C017009E62C2 /* brcd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = brcd.xcdatamodel; sourceTree = "<group>"; };
-		56BE0A381C42C017009E62C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56BE0A3B1C42C017009E62C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56BE0A3D1C42C017009E62C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BE0A461C42C093009E62C2 /* ScanBarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanBarcodeViewController.swift; path = ViewController/ScanBarcodeViewController.swift; sourceTree = "<group>"; };
@@ -37,15 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561DD4531C4C352600511F38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				561DD4561C4C370500511F38 /* QuartzCore.framework */,
+				561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */,
+				561DD4541C4C352F00511F38 /* iCarosel */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		561DD4541C4C352F00511F38 /* iCarosel */ = {
+			isa = PBXGroup;
+			children = (
+				561DD4581C4C3AFC00511F38 /* iCarousel.h */,
+				561DD4591C4C3AFC00511F38 /* iCarousel.m */,
+			);
+			name = iCarosel;
+			sourceTree = "<group>";
+		};
 		56BE0A221C42C017009E62C2 = {
 			isa = PBXGroup;
 			children = (
+				561DD4531C4C352600511F38 /* Frameworks */,
+				561DD44D1C4BDE9500511F38 /* Assets.xcassets */,
 				56BE0A2D1C42C017009E62C2 /* brcd */,
 				56BE0A2C1C42C017009E62C2 /* Products */,
 			);
@@ -67,7 +109,6 @@
 				56BE0A431C42C028009E62C2 /* ViewController */,
 				56BE0A2E1C42C017009E62C2 /* AppDelegate.swift */,
 				56BE0A321C42C017009E62C2 /* Main.storyboard */,
-				56BE0A381C42C017009E62C2 /* Assets.xcassets */,
 				56BE0A3A1C42C017009E62C2 /* LaunchScreen.storyboard */,
 				56BE0A3D1C42C017009E62C2 /* Info.plist */,
 				56BE0A351C42C017009E62C2 /* brcd.xcdatamodeld */,
@@ -81,6 +122,10 @@
 				56BE0A4B1C42D162009E62C2 /* Controls */,
 				56BE0A481C42C173009E62C2 /* Extensions */,
 				56BE0A461C42C093009E62C2 /* ScanBarcodeViewController.swift */,
+				561DD4411C4BADB800511F38 /* GroupManagerTableViewController.swift */,
+				561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */,
+				561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */,
+				561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -88,6 +133,9 @@
 		56BE0A441C42C037009E62C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				561DD4431C4BAE9400511F38 /* BarcodeEntity.swift */,
+				561DD4451C4BAEF800511F38 /* GroupEntity.swift */,
+				561DD4471C4BB2A100511F38 /* CoreDataStackManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,8 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BE0A3C1C42C017009E62C2 /* LaunchScreen.storyboard in Resources */,
-				56BE0A391C42C017009E62C2 /* Assets.xcassets in Resources */,
 				56BE0A4D1C42D1A4009E62C2 /* UILoader.xib in Resources */,
+				561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */,
 				56BE0A341C42C017009E62C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,11 +236,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561DD4441C4BAE9400511F38 /* BarcodeEntity.swift in Sources */,
 				56BE0A4A1C42CB83009E62C2 /* ExtensionUIViewController.swift in Sources */,
+				561DD44A1C4BD31000511F38 /* GroupTabBarViewController.swift in Sources */,
+				561DD4481C4BB2A100511F38 /* CoreDataStackManager.swift in Sources */,
 				56BE0A4F1C42D316009E62C2 /* UILoader.swift in Sources */,
+				561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */,
 				56BE0A471C42C093009E62C2 /* ScanBarcodeViewController.swift in Sources */,
 				56BE0A371C42C017009E62C2 /* brcd.xcdatamodeld in Sources */,
 				56BE0A2F1C42C017009E62C2 /* AppDelegate.swift in Sources */,
+				561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */,
+				561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */,
+				561DD4461C4BAEF800511F38 /* GroupEntity.swift in Sources */,
+				561DD4421C4BADB800511F38 /* GroupManagerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +363,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "brcd/brcd-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -318,6 +375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brcd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "brcd/brcd-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -340,6 +398,7 @@
 				56BE0A421C42C017009E62C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

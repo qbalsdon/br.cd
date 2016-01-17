@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import Foundation
 
 extension UIViewController {
@@ -25,6 +26,7 @@ extension UIViewController {
         return loader
     }
     
+    // MARK: - Link helpers
     func callNumber(number: String) {
         UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(number)")!)
     }
@@ -33,7 +35,7 @@ extension UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "mailto:\(email)")!)
     }
     
-    //MARK: Alerts
+    // MARK: - Alerts
     func showMessage(title: String, message: String) {
         showMessage(title, message: message, cancelButtonText: "Ok", onComplete: nil)
     }
@@ -49,5 +51,18 @@ extension UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
 
+    }
+    
+    // MARK: - Data helpers
+    
+    func fetchAllBarcodes() -> [BarcodeEntity] {
+        let fetchRequest = NSFetchRequest(entityName: BarcodeEntity.NAME)
+        
+        do {
+            return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [BarcodeEntity]
+        } catch let error as NSError {
+            print("Error fetching groups: \(error)")
+            return [BarcodeEntity]()
+        }
     }
 }
