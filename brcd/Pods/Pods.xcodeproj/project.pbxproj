@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01457F6DCED8246DB1D5C25DEAA01CD8 /* RSUPCEGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215D554CEA3047540862A266DB0124D /* RSUPCEGenerator.swift */; };
+		0ED74C05D5B5F38E965AEC9605A8B40B /* RSCode93Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B5E50FE3872C03786640A622C9813 /* RSCode93Generator.swift */; };
+		18675E86C980BA464A74958E2644CA82 /* RSCornersLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAEF974369241DE0EEDA42F711CF5DE /* RSCornersLayer.swift */; };
+		1DFD61EF3069DD5A0337AE18E9F477A7 /* RSUnifiedCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B78EE07B7AF9D6CD78DF4EDA11CDC15 /* RSUnifiedCodeGenerator.swift */; };
+		47F9DCA10578FF1C6CCCCBDE5061D8B4 /* RSCode128Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103AC17F67AB218E6017127EE65E86B /* RSCode128Generator.swift */; };
+		4994439E74B768786E9464B6AD19E80F /* RSCodeDataMatrixGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC8C734B5C440F8D339DF87140D89A /* RSCodeDataMatrixGenerator.swift */; };
+		4A06CF4FA80E9B5D2070CF84F806840D /* RSCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95186DF42426DD64A24A1F754C970E8D /* RSCodeReaderViewController.swift */; };
+		4B08A81B9E645F914E088EA89D0C9498 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB77806CFCDAB4D4ED9CD0C8027C20DD /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F18EEEF1C376FC00530EE2D8756C008 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA21EDB09EE3AE5AEE4BFF29224289 /* UIColorExtension.swift */; };
+		5332ACC884C4174C65139B4C6B3E9591 /* RSCode39Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9615D061759F897FF79E9F3AE172E0 /* RSCode39Generator.swift */; };
+		58E9CB2E1BBA1126962F001E1588F346 /* RSEANGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B395F925F56A6D169A5B864D369CB81 /* RSEANGenerator.swift */; };
+		6DFF6C54AB4912AD784D807C8AE3C4EF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CAB9A5E5A840188C28D7F57D526A8C /* CoreImage.framework */; };
+		7A4FE0991ED6F4DB7E73DD057BD899D0 /* RSBarcodes_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56983DF39CFE478385CDF4B38E8C4E77 /* RSBarcodes_Swift-dummy.m */; };
+		7E7859F7EEFD3AFCDFC9217DF081B0C7 /* RSFocusMarkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D680ABB459B1079ED4D04BB81080D78 /* RSFocusMarkLayer.swift */; };
+		93BABDFA020336B5408D37FE7597B88D /* RSITFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E231BD2BF1E126D4F3E514A742707CA2 /* RSITFGenerator.swift */; };
+		9CCA0238AC3BB133799846E3024CFD61 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D8117B17A475072138BAD1C7F41CA1 /* StringExtension.swift */; };
+		A0CC051D6F954D21003515C493C4FD3E /* RSITF14Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037CE08E2B564991C77C9CC37BCB1A21 /* RSITF14Generator.swift */; };
+		A1869A3A3B0B078B7E88089F2B17B02B /* RSCodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B2AF50020C296A2AEB8D02BE656EE /* RSCodeLayer.swift */; };
+		A68BAFE61A5BFE693922103DAE0401DF /* RSExtendedCode39Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E8CED1A29786A519FD272E2ED66CA /* RSExtendedCode39Generator.swift */; };
+		B0CE31943F65D2BF6862B8DB48225F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0733F7075916CC088E9AE84F4E983B32 /* Foundation.framework */; };
+		C52C6BF01F37DCB114E589AA02292F09 /* RSBarcodes_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70651FD611015ABB2FA7811419B4A360 /* RSBarcodes_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D24BDAF610A8FC6B47F66CE81B9020C2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA5C6A0C1A8E67D964231815EC70A15 /* QuartzCore.framework */; };
+		D5DE9469FF146691AD2B8B0AFA7448C3 /* Pods-brcd-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E431E770E465830428A7579F61AA98D /* Pods-brcd-dummy.m */; };
+		E1B247E975EBBDACD8B4F9978A462079 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A381A8B8C2633B3D897C642EB3BF531 /* AVFoundation.framework */; };
+		E6E617EB2A2A2E659B4C0E3D165313DE /* Pods-brcd-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC642DAEEF51132612C68DDD81D6E6F /* Pods-brcd-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E764B3800AD42B4E6412582CB005A6AC /* RSCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449ABCA6840F2105AED78E4E7566818C /* RSCodeGenerator.swift */; };
+		E9AC8F68248B574451DFA6D541A3DDF3 /* RSCode39Mod43Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35F64EB9D600AA1F327829D9DEBDF5 /* RSCode39Mod43Generator.swift */; };
+		EC8524685ECF249AAFBBE23CE04928A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0733F7075916CC088E9AE84F4E983B32 /* Foundation.framework */; };
+		F5E2AA378FD17BBB686F9613391EBAED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0733F7075916CC088E9AE84F4E983B32 /* Foundation.framework */; };
+		F6AC5A511B187CBED7B36E73AAAC9BD7 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258F6C0AA88D4061383276B8BBB4A18 /* Pods-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		038A7115D74C0203DDEB9801B6B7D0DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C194C4E2F7EE50DBF975214872DF8A53;
+			remoteInfo = RSBarcodes_Swift;
+		};
+		CC9B71A79CFA61E965E4E83A90D34524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C194C4E2F7EE50DBF975214872DF8A53;
+			remoteInfo = RSBarcodes_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011D445E4592744DB5D35C927540297D /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		037CE08E2B564991C77C9CC37BCB1A21 /* RSITF14Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSITF14Generator.swift; path = Source/RSITF14Generator.swift; sourceTree = "<group>"; };
+		06C6FACD2E6A95EDE533CE97B0988307 /* Pods-brcd-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-brcd-resources.sh"; sourceTree = "<group>"; };
+		0733F7075916CC088E9AE84F4E983B32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B9615D061759F897FF79E9F3AE172E0 /* RSCode39Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode39Generator.swift; path = Source/RSCode39Generator.swift; sourceTree = "<group>"; };
+		158346672049DA15DF96CD698631F088 /* Pods-brcd-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-brcd-acknowledgements.plist"; sourceTree = "<group>"; };
+		16F55C39B218D22C176FCCA9053AC123 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		1B78EE07B7AF9D6CD78DF4EDA11CDC15 /* RSUnifiedCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSUnifiedCodeGenerator.swift; path = Source/RSUnifiedCodeGenerator.swift; sourceTree = "<group>"; };
+		212CD5A226842F036AF61EF59CBA73E3 /* RSBarcodes_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSBarcodes_Swift-prefix.pch"; sourceTree = "<group>"; };
+		2A381A8B8C2633B3D897C642EB3BF531 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		3215D554CEA3047540862A266DB0124D /* RSUPCEGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSUPCEGenerator.swift; path = Source/RSUPCEGenerator.swift; sourceTree = "<group>"; };
+		349D34816FAA7AC69F27623D3EA980AF /* Pods-brcd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-brcd.debug.xcconfig"; sourceTree = "<group>"; };
+		3D680ABB459B1079ED4D04BB81080D78 /* RSFocusMarkLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSFocusMarkLayer.swift; path = Source/RSFocusMarkLayer.swift; sourceTree = "<group>"; };
+		3E5B5E50FE3872C03786640A622C9813 /* RSCode93Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode93Generator.swift; path = Source/RSCode93Generator.swift; sourceTree = "<group>"; };
+		4258F6C0AA88D4061383276B8BBB4A18 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		449ABCA6840F2105AED78E4E7566818C /* RSCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCodeGenerator.swift; path = Source/RSCodeGenerator.swift; sourceTree = "<group>"; };
+		56983DF39CFE478385CDF4B38E8C4E77 /* RSBarcodes_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSBarcodes_Swift-dummy.m"; sourceTree = "<group>"; };
+		5E431E770E465830428A7579F61AA98D /* Pods-brcd-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-brcd-dummy.m"; sourceTree = "<group>"; };
+		63D754FB518748D2022D0CC129E4F9A1 /* RSBarcodes_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSBarcodes_Swift.xcconfig; sourceTree = "<group>"; };
+		6B395F925F56A6D169A5B864D369CB81 /* RSEANGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSEANGenerator.swift; path = Source/RSEANGenerator.swift; sourceTree = "<group>"; };
+		6D7E330634A77B3598AB1CFC1D6D3E26 /* Pods_brcd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_brcd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA1E7CEEFF18B0B6D638C75770BC3F1 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		70651FD611015ABB2FA7811419B4A360 /* RSBarcodes_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSBarcodes_Swift-umbrella.h"; sourceTree = "<group>"; };
+		7806DB1495BE799C4941BC6E4F61C867 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		7ABA21EDB09EE3AE5AEE4BFF29224289 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Source/UIColorExtension.swift; sourceTree = "<group>"; };
+		7DAEF974369241DE0EEDA42F711CF5DE /* RSCornersLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCornersLayer.swift; path = Source/RSCornersLayer.swift; sourceTree = "<group>"; };
+		7E4E235051BAB0726E0D128D5C453C40 /* RSBarcodes_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RSBarcodes_Swift.modulemap; sourceTree = "<group>"; };
+		85C4E7A29B433EECD1CF00E051762C60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8676841016D9D7BF0C0FA60BE73D2F92 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		8CA3F3365789512805E1A624C95DE683 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95186DF42426DD64A24A1F754C970E8D /* RSCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCodeReaderViewController.swift; path = Source/RSCodeReaderViewController.swift; sourceTree = "<group>"; };
+		9BC642DAEEF51132612C68DDD81D6E6F /* Pods-brcd-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-brcd-umbrella.h"; sourceTree = "<group>"; };
+		A289E2A47F8C7417AC3E4280937A73AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3756841D54A8E99B07BC0E0F3C7A091 /* Pods-brcd.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-brcd.modulemap"; sourceTree = "<group>"; };
+		A61B2AF50020C296A2AEB8D02BE656EE /* RSCodeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCodeLayer.swift; path = Source/RSCodeLayer.swift; sourceTree = "<group>"; };
+		ABDCEEBA411620FD85AFE5AD68FCEA6E /* Pods-brcd-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-brcd-frameworks.sh"; sourceTree = "<group>"; };
+		B103AC17F67AB218E6017127EE65E86B /* RSCode128Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode128Generator.swift; path = Source/RSCode128Generator.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C56DE82FD538F620DA12AF76F7F45E98 /* Pods-brcd-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-brcd-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CCC70A2EC05AE3FAA1F37BD328BB8D9D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB35F64EB9D600AA1F327829D9DEBDF5 /* RSCode39Mod43Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode39Mod43Generator.swift; path = Source/RSCode39Mod43Generator.swift; sourceTree = "<group>"; };
+		DB77806CFCDAB4D4ED9CD0C8027C20DD /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		E231BD2BF1E126D4F3E514A742707CA2 /* RSITFGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSITFGenerator.swift; path = Source/RSITFGenerator.swift; sourceTree = "<group>"; };
+		E38E050F788102B04A56D2B91D5CBF34 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E561F8164595C4AE274E201B74292576 /* Pods-brcd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-brcd.release.xcconfig"; sourceTree = "<group>"; };
+		E6A8C11F114891150D0877A5385DC0C1 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		E6D8117B17A475072138BAD1C7F41CA1 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Source/StringExtension.swift; sourceTree = "<group>"; };
+		EEA5C6A0C1A8E67D964231815EC70A15 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		EFBC8C734B5C440F8D339DF87140D89A /* RSCodeDataMatrixGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCodeDataMatrixGenerator.swift; path = Source/RSCodeDataMatrixGenerator.swift; sourceTree = "<group>"; };
+		F0649263ADB51BFEE2DBBEF5A9F624CF /* RSBarcodes_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSBarcodes_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CAB9A5E5A840188C28D7F57D526A8C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		F25E8CED1A29786A519FD272E2ED66CA /* RSExtendedCode39Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSExtendedCode39Generator.swift; path = Source/RSExtendedCode39Generator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8047D9EF5A82BF72F726F0AEA2898887 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E2AA378FD17BBB686F9613391EBAED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1779F9F06899EF17CB74C36F376E99A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B247E975EBBDACD8B4F9978A462079 /* AVFoundation.framework in Frameworks */,
+				6DFF6C54AB4912AD784D807C8AE3C4EF /* CoreImage.framework in Frameworks */,
+				EC8524685ECF249AAFBBE23CE04928A9 /* Foundation.framework in Frameworks */,
+				D24BDAF610A8FC6B47F66CE81B9020C2 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35F0AD564DCC5B1D32290E4A15C1511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CE31943F65D2BF6862B8DB48225F15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD230D8394ADE87D10687D6746F9CEC6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D3C53C7522EFE89040103ED0747F7D0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CA3F3365789512805E1A624C95DE683 /* Info.plist */,
+				7E4E235051BAB0726E0D128D5C453C40 /* RSBarcodes_Swift.modulemap */,
+				63D754FB518748D2022D0CC129E4F9A1 /* RSBarcodes_Swift.xcconfig */,
+				56983DF39CFE478385CDF4B38E8C4E77 /* RSBarcodes_Swift-dummy.m */,
+				212CD5A226842F036AF61EF59CBA73E3 /* RSBarcodes_Swift-prefix.pch */,
+				70651FD611015ABB2FA7811419B4A360 /* RSBarcodes_Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RSBarcodes_Swift";
+			sourceTree = "<group>";
+		};
+		37B8E2A2A30A56199210A4DFD3C12BF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90B709A2D03829CCDAA8756342E67F24 /* RSBarcodes_Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3BF360F4D308A2108911E0E141869D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCC70A2EC05AE3FAA1F37BD328BB8D9D /* Pods.framework */,
+				6D7E330634A77B3598AB1CFC1D6D3E26 /* Pods_brcd.framework */,
+				F0649263ADB51BFEE2DBBEF5A9F624CF /* RSBarcodes_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DE207EA6B5C8619A6389531ECDFB3A0 /* Pods-brcd */ = {
+			isa = PBXGroup;
+			children = (
+				85C4E7A29B433EECD1CF00E051762C60 /* Info.plist */,
+				A3756841D54A8E99B07BC0E0F3C7A091 /* Pods-brcd.modulemap */,
+				C56DE82FD538F620DA12AF76F7F45E98 /* Pods-brcd-acknowledgements.markdown */,
+				158346672049DA15DF96CD698631F088 /* Pods-brcd-acknowledgements.plist */,
+				5E431E770E465830428A7579F61AA98D /* Pods-brcd-dummy.m */,
+				ABDCEEBA411620FD85AFE5AD68FCEA6E /* Pods-brcd-frameworks.sh */,
+				06C6FACD2E6A95EDE533CE97B0988307 /* Pods-brcd-resources.sh */,
+				9BC642DAEEF51132612C68DDD81D6E6F /* Pods-brcd-umbrella.h */,
+				349D34816FAA7AC69F27623D3EA980AF /* Pods-brcd.debug.xcconfig */,
+				E561F8164595C4AE274E201B74292576 /* Pods-brcd.release.xcconfig */,
+			);
+			name = "Pods-brcd";
+			path = "Target Support Files/Pods-brcd";
+			sourceTree = "<group>";
+		};
+		7BA22D1CF0650F8A80D105E407F3FE7B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8BC763CF9FBE0ECC4F18DC8D52B01 /* Pods */,
+				5DE207EA6B5C8619A6389531ECDFB3A0 /* Pods-brcd */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				37B8E2A2A30A56199210A4DFD3C12BF6 /* Pods */,
+				3BF360F4D308A2108911E0E141869D29 /* Products */,
+				7BA22D1CF0650F8A80D105E407F3FE7B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		90B709A2D03829CCDAA8756342E67F24 /* RSBarcodes_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B103AC17F67AB218E6017127EE65E86B /* RSCode128Generator.swift */,
+				0B9615D061759F897FF79E9F3AE172E0 /* RSCode39Generator.swift */,
+				DB35F64EB9D600AA1F327829D9DEBDF5 /* RSCode39Mod43Generator.swift */,
+				3E5B5E50FE3872C03786640A622C9813 /* RSCode93Generator.swift */,
+				EFBC8C734B5C440F8D339DF87140D89A /* RSCodeDataMatrixGenerator.swift */,
+				449ABCA6840F2105AED78E4E7566818C /* RSCodeGenerator.swift */,
+				A61B2AF50020C296A2AEB8D02BE656EE /* RSCodeLayer.swift */,
+				95186DF42426DD64A24A1F754C970E8D /* RSCodeReaderViewController.swift */,
+				7DAEF974369241DE0EEDA42F711CF5DE /* RSCornersLayer.swift */,
+				6B395F925F56A6D169A5B864D369CB81 /* RSEANGenerator.swift */,
+				F25E8CED1A29786A519FD272E2ED66CA /* RSExtendedCode39Generator.swift */,
+				3D680ABB459B1079ED4D04BB81080D78 /* RSFocusMarkLayer.swift */,
+				037CE08E2B564991C77C9CC37BCB1A21 /* RSITF14Generator.swift */,
+				E231BD2BF1E126D4F3E514A742707CA2 /* RSITFGenerator.swift */,
+				1B78EE07B7AF9D6CD78DF4EDA11CDC15 /* RSUnifiedCodeGenerator.swift */,
+				3215D554CEA3047540862A266DB0124D /* RSUPCEGenerator.swift */,
+				E6D8117B17A475072138BAD1C7F41CA1 /* StringExtension.swift */,
+				7ABA21EDB09EE3AE5AEE4BFF29224289 /* UIColorExtension.swift */,
+				2D3C53C7522EFE89040103ED0747F7D0 /* Support Files */,
+			);
+			path = RSBarcodes_Swift;
+			sourceTree = "<group>";
+		};
+		CCA8BC763CF9FBE0ECC4F18DC8D52B01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A289E2A47F8C7417AC3E4280937A73AC /* Info.plist */,
+				8676841016D9D7BF0C0FA60BE73D2F92 /* Pods.modulemap */,
+				6EA1E7CEEFF18B0B6D638C75770BC3F1 /* Pods-acknowledgements.markdown */,
+				16F55C39B218D22C176FCCA9053AC123 /* Pods-acknowledgements.plist */,
+				4258F6C0AA88D4061383276B8BBB4A18 /* Pods-dummy.m */,
+				011D445E4592744DB5D35C927540297D /* Pods-frameworks.sh */,
+				E6A8C11F114891150D0877A5385DC0C1 /* Pods-resources.sh */,
+				DB77806CFCDAB4D4ED9CD0C8027C20DD /* Pods-umbrella.h */,
+				7806DB1495BE799C4941BC6E4F61C867 /* Pods.debug.xcconfig */,
+				E38E050F788102B04A56D2B91D5CBF34 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		FD230D8394ADE87D10687D6746F9CEC6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2A381A8B8C2633B3D897C642EB3BF531 /* AVFoundation.framework */,
+				F1CAB9A5E5A840188C28D7F57D526A8C /* CoreImage.framework */,
+				0733F7075916CC088E9AE84F4E983B32 /* Foundation.framework */,
+				EEA5C6A0C1A8E67D964231815EC70A15 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		021A8A4836405325EE8C313D01E6155A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B08A81B9E645F914E088EA89D0C9498 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5CCB6C52B9C700AFC0A0168C5CA278 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E617EB2A2A2E659B4C0E3D165313DE /* Pods-brcd-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2C9210F172BDAE22D55F8948DBA66E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52C6BF01F37DCB114E589AA02292F09 /* RSBarcodes_Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		08B031E25C9C405AA3A0EEE70EF9B17C /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0E2A24FA6A27FDC8BBD5C15CFDC5E74 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				EFC74B18653C66DB32E63A2283CF0F31 /* Sources */,
+				F35F0AD564DCC5B1D32290E4A15C1511 /* Frameworks */,
+				021A8A4836405325EE8C313D01E6155A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52670689752F309D9147423947FB85A4 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = CCC70A2EC05AE3FAA1F37BD328BB8D9D /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6ACC74918233403C59CE8DC92114AC4B /* Pods-brcd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82AB7E5DD91E801E2F2D10B9736C3C9B /* Build configuration list for PBXNativeTarget "Pods-brcd" */;
+			buildPhases = (
+				CA080F18A65417B7494F2F9D2772721B /* Sources */,
+				8047D9EF5A82BF72F726F0AEA2898887 /* Frameworks */,
+				7A5CCB6C52B9C700AFC0A0168C5CA278 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47601CD3924522F122FB0574CA6899F4 /* PBXTargetDependency */,
+			);
+			name = "Pods-brcd";
+			productName = "Pods-brcd";
+			productReference = 6D7E330634A77B3598AB1CFC1D6D3E26 /* Pods_brcd.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C194C4E2F7EE50DBF975214872DF8A53 /* RSBarcodes_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76F9D6B0019634C947DDBEA18ED449EC /* Build configuration list for PBXNativeTarget "RSBarcodes_Swift" */;
+			buildPhases = (
+				FE5B24495855F3C65D14BCE10B2B0A2A /* Sources */,
+				F1779F9F06899EF17CB74C36F376E99A /* Frameworks */,
+				E2C9210F172BDAE22D55F8948DBA66E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSBarcodes_Swift;
+			productName = RSBarcodes_Swift;
+			productReference = F0649263ADB51BFEE2DBBEF5A9F624CF /* RSBarcodes_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3BF360F4D308A2108911E0E141869D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08B031E25C9C405AA3A0EEE70EF9B17C /* Pods */,
+				6ACC74918233403C59CE8DC92114AC4B /* Pods-brcd */,
+				C194C4E2F7EE50DBF975214872DF8A53 /* RSBarcodes_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA080F18A65417B7494F2F9D2772721B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DE9469FF146691AD2B8B0AFA7448C3 /* Pods-brcd-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC74B18653C66DB32E63A2283CF0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AC5A511B187CBED7B36E73AAAC9BD7 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5B24495855F3C65D14BCE10B2B0A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE0991ED6F4DB7E73DD057BD899D0 /* RSBarcodes_Swift-dummy.m in Sources */,
+				47F9DCA10578FF1C6CCCCBDE5061D8B4 /* RSCode128Generator.swift in Sources */,
+				5332ACC884C4174C65139B4C6B3E9591 /* RSCode39Generator.swift in Sources */,
+				E9AC8F68248B574451DFA6D541A3DDF3 /* RSCode39Mod43Generator.swift in Sources */,
+				0ED74C05D5B5F38E965AEC9605A8B40B /* RSCode93Generator.swift in Sources */,
+				4994439E74B768786E9464B6AD19E80F /* RSCodeDataMatrixGenerator.swift in Sources */,
+				E764B3800AD42B4E6412582CB005A6AC /* RSCodeGenerator.swift in Sources */,
+				A1869A3A3B0B078B7E88089F2B17B02B /* RSCodeLayer.swift in Sources */,
+				4A06CF4FA80E9B5D2070CF84F806840D /* RSCodeReaderViewController.swift in Sources */,
+				18675E86C980BA464A74958E2644CA82 /* RSCornersLayer.swift in Sources */,
+				58E9CB2E1BBA1126962F001E1588F346 /* RSEANGenerator.swift in Sources */,
+				A68BAFE61A5BFE693922103DAE0401DF /* RSExtendedCode39Generator.swift in Sources */,
+				7E7859F7EEFD3AFCDFC9217DF081B0C7 /* RSFocusMarkLayer.swift in Sources */,
+				A0CC051D6F954D21003515C493C4FD3E /* RSITF14Generator.swift in Sources */,
+				93BABDFA020336B5408D37FE7597B88D /* RSITFGenerator.swift in Sources */,
+				1DFD61EF3069DD5A0337AE18E9F477A7 /* RSUnifiedCodeGenerator.swift in Sources */,
+				01457F6DCED8246DB1D5C25DEAA01CD8 /* RSUPCEGenerator.swift in Sources */,
+				9CCA0238AC3BB133799846E3024CFD61 /* StringExtension.swift in Sources */,
+				4F18EEEF1C376FC00530EE2D8756C008 /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47601CD3924522F122FB0574CA6899F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes_Swift;
+			target = C194C4E2F7EE50DBF975214872DF8A53 /* RSBarcodes_Swift */;
+			targetProxy = 038A7115D74C0203DDEB9801B6B7D0DB /* PBXContainerItemProxy */;
+		};
+		52670689752F309D9147423947FB85A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes_Swift;
+			target = C194C4E2F7EE50DBF975214872DF8A53 /* RSBarcodes_Swift */;
+			targetProxy = CC9B71A79CFA61E965E4E83A90D34524 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		302CF0D7C13357C78C04474209EEC1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349D34816FAA7AC69F27623D3EA980AF /* Pods-brcd.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-brcd/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-brcd/Pods-brcd.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_brcd;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		48BF789447C074DEBC43FB34A2174165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E38E050F788102B04A56D2B91D5CBF34 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53B085C0B375D07A650C5042C1E0F10A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7806DB1495BE799C4941BC6E4F61C867 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5899B435139E9814B526F0662AF7C28A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D754FB518748D2022D0CC129E4F9A1 /* RSBarcodes_Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RSBarcodes_Swift/RSBarcodes_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSBarcodes_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RSBarcodes_Swift/RSBarcodes_Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RSBarcodes_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E3985580B80C3191C2B911CCB872D93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D754FB518748D2022D0CC129E4F9A1 /* RSBarcodes_Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RSBarcodes_Swift/RSBarcodes_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSBarcodes_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RSBarcodes_Swift/RSBarcodes_Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RSBarcodes_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		871189EC0324BB6ED5528E029565D714 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E561F8164595C4AE274E201B74292576 /* Pods-brcd.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-brcd/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-brcd/Pods-brcd.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_brcd;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76F9D6B0019634C947DDBEA18ED449EC /* Build configuration list for PBXNativeTarget "RSBarcodes_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5899B435139E9814B526F0662AF7C28A /* Debug */,
+				7E3985580B80C3191C2B911CCB872D93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82AB7E5DD91E801E2F2D10B9736C3C9B /* Build configuration list for PBXNativeTarget "Pods-brcd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302CF0D7C13357C78C04474209EEC1BC /* Debug */,
+				871189EC0324BB6ED5528E029565D714 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0E2A24FA6A27FDC8BBD5C15CFDC5E74 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B085C0B375D07A650C5042C1E0F10A /* Debug */,
+				48BF789447C074DEBC43FB34A2174165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

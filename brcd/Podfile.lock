@@ -1,0 +1,10 @@
+PODS:
+  - RSBarcodes_Swift (0.1.5)
+
+DEPENDENCIES:
+  - RSBarcodes_Swift (~> 0.1.5)
+
+SPEC CHECKSUMS:
+  RSBarcodes_Swift: bad1ce459c5ac0b314d6e4f3524cc07d53f3a188
+
+COCOAPODS: 0.39.0

@@ -17,6 +17,10 @@
 		561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */; };
 		561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DD4561C4C370500511F38 /* QuartzCore.framework */; };
 		561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4591C4C3AFC00511F38 /* iCarousel.m */; };
+		56412A411C5D0C8A009A8B5B /* UIBarcodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */; };
+		56412A431C5D0CAE009A8B5B /* UIBarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */; };
+		56412A461C5D0F17009A8B5B /* BarcodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A451C5D0F17009A8B5B /* BarcodeScannerDelegate.swift */; };
+		56412A481C5D1384009A8B5B /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A471C5D1384009A8B5B /* CheckListViewController.swift */; };
 		56BE0A2F1C42C017009E62C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A2E1C42C017009E62C2 /* AppDelegate.swift */; };
 		56BE0A341C42C017009E62C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0A321C42C017009E62C2 /* Main.storyboard */; };
 		56BE0A371C42C017009E62C2 /* brcd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A351C42C017009E62C2 /* brcd.xcdatamodeld */; };
@@ -25,9 +29,11 @@
 		56BE0A4A1C42CB83009E62C2 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A491C42CB83009E62C2 /* ExtensionUIViewController.swift */; };
 		56BE0A4D1C42D1A4009E62C2 /* UILoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0A4C1C42D1A4009E62C2 /* UILoader.xib */; };
 		56BE0A4F1C42D316009E62C2 /* UILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE0A4E1C42D316009E62C2 /* UILoader.swift */; };
+		73534823313B5DB643AC4C03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EF07129596556E173B6B0E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0780FA3397A0F468C5344AC6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		561DD4411C4BADB800511F38 /* GroupManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupManagerTableViewController.swift; path = ViewController/GroupManagerTableViewController.swift; sourceTree = "<group>"; };
 		561DD4431C4BAE9400511F38 /* BarcodeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeEntity.swift; path = Model/BarcodeEntity.swift; sourceTree = "<group>"; };
 		561DD4451C4BAEF800511F38 /* GroupEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupEntity.swift; path = Model/GroupEntity.swift; sourceTree = "<group>"; };
@@ -40,6 +46,10 @@
 		561DD4561C4C370500511F38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		561DD4581C4C3AFC00511F38 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = brcd/Frameworks/iCarosel/iCarousel.h; sourceTree = "<group>"; };
 		561DD4591C4C3AFC00511F38 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = brcd/Frameworks/iCarosel/iCarousel.m; sourceTree = "<group>"; };
+		56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIBarcodeScannerView.xib; path = ViewController/Controls/UIBarcodeScannerView.xib; sourceTree = "<group>"; };
+		56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBarcodeScannerView.swift; path = ViewController/Controls/UIBarcodeScannerView.swift; sourceTree = "<group>"; };
+		56412A451C5D0F17009A8B5B /* BarcodeScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeScannerDelegate.swift; path = ViewController/Delegates/BarcodeScannerDelegate.swift; sourceTree = "<group>"; };
+		56412A471C5D1384009A8B5B /* CheckListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckListViewController.swift; path = ViewController/CheckListViewController.swift; sourceTree = "<group>"; };
 		56BE0A2B1C42C017009E62C2 /* brcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BE0A2E1C42C017009E62C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BE0A331C42C017009E62C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +60,8 @@
 		56BE0A491C42CB83009E62C2 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		56BE0A4C1C42D1A4009E62C2 /* UILoader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UILoader.xib; path = ViewController/Controls/UILoader.xib; sourceTree = "<group>"; };
 		56BE0A4E1C42D316009E62C2 /* UILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILoader.swift; path = ViewController/Controls/UILoader.swift; sourceTree = "<group>"; };
+		65EF07129596556E173B6B0E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6177CF1FC7BC5904C98F30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,18 +70,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */,
+				73534823313B5DB643AC4C03 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41B6DABF18CAACE833CB39BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA6177CF1FC7BC5904C98F30 /* Pods.debug.xcconfig */,
+				0780FA3397A0F468C5344AC6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		561DD4531C4C352600511F38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				561DD4561C4C370500511F38 /* QuartzCore.framework */,
 				561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */,
 				561DD4541C4C352F00511F38 /* iCarosel */,
+				65EF07129596556E173B6B0E /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +106,14 @@
 			name = iCarosel;
 			sourceTree = "<group>";
 		};
+		56412A441C5D0EF7009A8B5B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				56412A451C5D0F17009A8B5B /* BarcodeScannerDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		56BE0A221C42C017009E62C2 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +121,7 @@
 				561DD44D1C4BDE9500511F38 /* Assets.xcassets */,
 				56BE0A2D1C42C017009E62C2 /* brcd */,
 				56BE0A2C1C42C017009E62C2 /* Products */,
+				41B6DABF18CAACE833CB39BA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +151,7 @@
 		56BE0A431C42C028009E62C2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				56412A441C5D0EF7009A8B5B /* Delegates */,
 				56BE0A4B1C42D162009E62C2 /* Controls */,
 				56BE0A481C42C173009E62C2 /* Extensions */,
 				56BE0A461C42C093009E62C2 /* ScanBarcodeViewController.swift */,
@@ -126,6 +159,7 @@
 				561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */,
 				561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */,
 				561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */,
+				56412A471C5D1384009A8B5B /* CheckListViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -160,6 +194,8 @@
 			children = (
 				56BE0A4C1C42D1A4009E62C2 /* UILoader.xib */,
 				56BE0A4E1C42D316009E62C2 /* UILoader.swift */,
+				56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */,
+				56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -171,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BE0A401C42C017009E62C2 /* Build configuration list for PBXNativeTarget "brcd" */;
 			buildPhases = (
+				897A2F7B3C9B7FC8464C93BD /* Check Pods Manifest.lock */,
 				56BE0A271C42C017009E62C2 /* Sources */,
 				56BE0A281C42C017009E62C2 /* Frameworks */,
 				56BE0A291C42C017009E62C2 /* Resources */,
+				EFF0DF6566EDED6B83235B37 /* Embed Pods Frameworks */,
+				80CF9CD17AA3B18EFD81C4AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +235,7 @@
 				TargetAttributes = {
 					56BE0A2A1C42C017009E62C2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GTMDCB3F3C;
 					};
 				};
 			};
@@ -225,11 +265,60 @@
 				56BE0A3C1C42C017009E62C2 /* LaunchScreen.storyboard in Resources */,
 				56BE0A4D1C42D1A4009E62C2 /* UILoader.xib in Resources */,
 				561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */,
+				56412A411C5D0C8A009A8B5B /* UIBarcodeScannerView.xib in Resources */,
 				56BE0A341C42C017009E62C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80CF9CD17AA3B18EFD81C4AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		897A2F7B3C9B7FC8464C93BD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF0DF6566EDED6B83235B37 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56BE0A271C42C017009E62C2 /* Sources */ = {
@@ -237,13 +326,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				561DD4441C4BAE9400511F38 /* BarcodeEntity.swift in Sources */,
+				56412A481C5D1384009A8B5B /* CheckListViewController.swift in Sources */,
 				56BE0A4A1C42CB83009E62C2 /* ExtensionUIViewController.swift in Sources */,
 				561DD44A1C4BD31000511F38 /* GroupTabBarViewController.swift in Sources */,
 				561DD4481C4BB2A100511F38 /* CoreDataStackManager.swift in Sources */,
+				56412A461C5D0F17009A8B5B /* BarcodeScannerDelegate.swift in Sources */,
 				56BE0A4F1C42D316009E62C2 /* UILoader.swift in Sources */,
 				561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */,
 				56BE0A471C42C093009E62C2 /* ScanBarcodeViewController.swift in Sources */,
 				56BE0A371C42C017009E62C2 /* brcd.xcdatamodeld in Sources */,
+				56412A431C5D0CAE009A8B5B /* UIBarcodeScannerView.swift in Sources */,
 				56BE0A2F1C42C017009E62C2 /* AppDelegate.swift in Sources */,
 				561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */,
 				561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */,
@@ -357,8 +449,10 @@
 		};
 		56BE0A411C42C017009E62C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6177CF1FC7BC5904C98F30 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = brcd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brcd;
@@ -369,8 +463,10 @@
 		};
 		56BE0A421C42C017009E62C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0780FA3397A0F468C5344AC6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = brcd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brcd;
