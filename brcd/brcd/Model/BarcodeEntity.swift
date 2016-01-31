@@ -18,12 +18,14 @@ class BarcodeEntity: NSManagedObject {
         FAVORITE = "favorite",
         NAME = "name",
         TYPE = "type",
-        GROUP = "group"
+        GROUP = "group",
+        QUANTITY = "quantity"
     }
     
     @NSManaged var code: String
     @NSManaged var favorite: String
     @NSManaged var name: String
     @NSManaged var type: String
+    @NSManaged var quantity: Int16
     @NSManaged var group: GroupEntity?
 }

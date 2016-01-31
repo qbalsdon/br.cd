@@ -21,7 +21,7 @@ class BarcodeListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        dataSource = fetchAllBarcodes()
+        dataSource = fetchAllBarcodes((tabBarController as! GroupTabBarViewController).group)
         barcodeList.reloadData()
     }
 
@@ -45,7 +45,7 @@ class BarcodeListTableViewController: UITableViewController {
 
         let code = dataSource[indexPath.row]
         
-        cell.textLabel!.text = "\(code.name) [\(code.code)]"
+        cell.textLabel!.text = "\(code.name) [\(code.code)] x \(code.quantity)"
 
         return cell
     }

@@ -54,10 +54,46 @@ extension UIViewController {
     }
     
     // MARK: - Data helpers
+    func fetchAllGroups() -> [GroupEntity] {
+        let fetchRequest = NSFetchRequest(entityName: GroupEntity.NAME)
+        
+        do {
+            return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [GroupEntity]
+        } catch let error as NSError {
+            print("Error fetching groups: \(error)")
+            return [GroupEntity]()
+        }
+    }
+
     
     func fetchAllBarcodes() -> [BarcodeEntity] {
         let fetchRequest = NSFetchRequest(entityName: BarcodeEntity.NAME)
         
+        do {
+            return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [BarcodeEntity]
+        } catch let error as NSError {
+            print("Error fetching groups: \(error)")
+            return [BarcodeEntity]()
+        }
+    }
+    
+    func fetchAllBarcodes(group: GroupEntity) -> [BarcodeEntity] {
+        let fetchRequest = NSFetchRequest(entityName: BarcodeEntity.NAME)
+        fetchRequest.predicate = NSPredicate(format: "group = %@", group)
+        do {
+            return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [BarcodeEntity]
+        } catch let error as NSError {
+            print("Error fetching groups: \(error)")
+            return [BarcodeEntity]()
+        }
+    }
+    
+    func fetchBarcode(code: String, type: String) -> [BarcodeEntity] {
+        let fetchRequest = NSFetchRequest(entityName: BarcodeEntity.NAME)
+        let codePredicate = NSPredicate(format: "code = %@", code)
+        let typePredicate = NSPredicate(format: "type = %@", type)
+        
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [codePredicate, typePredicate])
         do {
             return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [BarcodeEntity]
         } catch let error as NSError {

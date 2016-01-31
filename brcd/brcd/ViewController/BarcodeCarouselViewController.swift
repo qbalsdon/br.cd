@@ -20,7 +20,7 @@ class BarcodeCarouselViewController: UIViewController, iCarouselDataSource, iCar
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = fetchAllBarcodes()
+        dataSource = fetchAllBarcodes((tabBarController as! GroupTabBarViewController).group)
         
         barcodeCarousel.type = iCarouselType.TimeMachine
         barcodeCarousel.reloadData()

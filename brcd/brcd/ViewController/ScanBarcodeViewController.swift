@@ -10,137 +10,71 @@ import UIKit
 import CoreData
 import AVFoundation
 
-class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, BarcodeScannerDelegate {
     var burstMode = false
     var group : GroupEntity? = nil
-
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
+    var barcodeCapturedView: UIView? = nil
+    var loader: UIView? = nil
+    
+    @IBOutlet weak var scannerView: UIBarcodeScannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.blackColor()
-        captureSession = AVCaptureSession()
-        
-        let videoCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        let videoInput: AVCaptureDeviceInput
-        
-        do {
-            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-        } catch {
-            return
-        }
-        
-        if (captureSession.canAddInput(videoInput)) {
-            captureSession.addInput(videoInput)
-        } else {
-            failed();
-            return;
-        }
-        
-        let metadataOutput = AVCaptureMetadataOutput()
-        
-        if (captureSession.canAddOutput(metadataOutput)) {
-            captureSession.addOutput(metadataOutput)
-            
-            metadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
-            metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode,
-                AVMetadataObjectTypeCode128Code,
-                AVMetadataObjectTypePDF417Code,
-                AVMetadataObjectTypeAztecCode,
-                
-                AVMetadataObjectTypeUPCECode,
-                AVMetadataObjectTypeCode39Code,
-                AVMetadataObjectTypeCode39Mod43Code,
-                AVMetadataObjectTypeEAN13Code,
-                AVMetadataObjectTypeEAN8Code,
-                AVMetadataObjectTypeCode93Code,
-                AVMetadataObjectTypeInterleaved2of5Code,
-                AVMetadataObjectTypeITF14Code,
-                AVMetadataObjectTypeDataMatrixCode
-            ]
-        } else {
-            failed()
-            return
-        }
-        
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession);
-        previewLayer.frame = view.layer.bounds;
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        view.layer.addSublayer(previewLayer);
-        
-        captureSession.startRunning();
+        scannerView.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        scannerView.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
     }
     
     func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
-        captureSession = nil
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if (captureSession?.running == false) {
-            captureSession.startRunning();
-        }
+        scannerView.startRunning()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if (captureSession?.running == true) {
-            captureSession.stopRunning();
-        }
+        scannerView.stopRunning()
     }
     
-    var barcodeCapturedView: UIView? = nil
-    
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-        captureSession.stopRunning()
+    func barcodeScanned(code: String, type: String) {
+        let results = fetchBarcode(code, type: type)
         
-        if let metadataObject = metadataObjects.first {
-            let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject;
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            foundCode(readableObject.stringValue, type: readableObject.type)
+        if results.count == 0 {
             
-            let barCodeObject = previewLayer.transformedMetadataObjectForMetadataObject(readableObject) as! AVMetadataMachineReadableCodeObject
-            let barcodeCapturedRect = barCodeObject.bounds;
+            let nCode = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
             
-            barcodeCapturedView = UIView()
-            barcodeCapturedView!.autoresizingMask = [
-                UIViewAutoresizing.FlexibleTopMargin,
-                UIViewAutoresizing.FlexibleLeftMargin,
-                UIViewAutoresizing.FlexibleRightMargin,
-                UIViewAutoresizing.FlexibleBottomMargin]
-            barcodeCapturedView!.layer.borderColor = UIColor.yellowColor().CGColor
-            barcodeCapturedView!.layer.borderWidth = 5;
-            barcodeCapturedView!.frame = barcodeCapturedRect;
-            view.addSubview(barcodeCapturedView!)
+            nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
+            nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
+            nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
+            nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
+            nCode?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
+        } else {
+            let entity = results[0]
+            let qty: Int16 = entity.quantity + 1
+            entity.setValue(Int(qty), forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
         }
-        //dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func foundCode(code: String, type: String) {
-        /*showMessage("Scanned code", message: "Found \(code): \(type)", cancelButtonText: "Ok", onComplete: { action in
-            self.barcodeCapturedView?.removeFromSuperview()
-            self.captureSession.startRunning()
-        })*/
-        
-        let nCode = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
-        
-        nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
-        nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
-        nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
-        nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
         
         CoreDataStackManager.sharedInstance.saveContext()
         
         if burstMode {
             barcodeCapturedView?.removeFromSuperview()
-            captureSession.startRunning()
+            let delay = 1.0 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            loader = getActivityIndicator()
+            dispatch_after(time, dispatch_get_main_queue()) {
+                self.loader?.removeFromSuperview()
+                self.scannerView.startRunning()
+            }
         } else {
             navigationController?.popViewControllerAnimated(true)
         }

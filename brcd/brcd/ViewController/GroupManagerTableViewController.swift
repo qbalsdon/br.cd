@@ -33,17 +33,6 @@ class GroupManagerTableViewController: UITableViewController {
         groupTableView.reloadData()
     }
     
-    func fetchAllGroups() -> [GroupEntity] {
-        let fetchRequest = NSFetchRequest(entityName: GroupEntity.NAME)
-        
-        do {
-            return try CoreDataStackManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [GroupEntity]
-        } catch let error as NSError {
-            print("Error fetching groups: \(error)")
-            return [GroupEntity]()
-        }
-    }
-    
     func addGroup(name: String) {
         print("New group: \(name)")
         let nGroup = NSEntityDescription.insertNewObjectForEntityForName("GroupEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? GroupEntity

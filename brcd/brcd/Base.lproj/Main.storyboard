@@ -231,8 +231,23 @@
                     <view key="view" contentMode="scaleToFill" id="5eE-Nv-ViC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sno-1T-2kd" customClass="UIBarcodeScannerView" customModule="brcd" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sno-1T-2kd" secondAttribute="trailing" constant="-20" id="8AI-4r-SO8"/>
+                            <constraint firstItem="Sno-1T-2kd" firstAttribute="top" secondItem="5eE-Nv-ViC" secondAttribute="topMargin" constant="20" id="GQJ-YJ-lqe"/>
+                            <constraint firstItem="Sno-1T-2kd" firstAttribute="bottom" secondItem="5eE-Nv-ViC" secondAttribute="bottomMargin" id="YKs-iu-HQT"/>
+                            <constraint firstItem="Sno-1T-2kd" firstAttribute="leading" secondItem="5eE-Nv-ViC" secondAttribute="leadingMargin" constant="-20" id="cmx-tR-FMw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scannerView" destination="Sno-1T-2kd" id="FWb-v9-HNL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmH-L7-UqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

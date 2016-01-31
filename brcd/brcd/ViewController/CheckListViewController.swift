@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -14,7 +15,7 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
     @IBOutlet weak var barcodeList: UITableView!
     
     var dataSource = [BarcodeEntity]()
-    var scannedCodes:[String:String] = [:]
+    var scannedCodes:[BarcodeEntity:Int] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,12 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
         scanner.delegate = self
     }
     
+    override func viewDidLayoutSubviews() {
+        scanner.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
+    }
+    
     override func viewWillAppear(animated: Bool) {
-        dataSource = fetchAllBarcodes()
+        dataSource = fetchAllBarcodes((tabBarController as! GroupTabBarViewController).group)
         barcodeList.reloadData()
         view.bringSubviewToFront(barcodeList)
         barcodeList.alpha = 0.5
@@ -41,7 +46,23 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
     
     func barcodeScanned(code: String, type: String) {
         print("Scanned: \(code)")
-        scannedCodes[code] = type
+        
+        let results = dataSource.filter { elem in elem.code == code && elem.type == type }
+        
+        if results.count > 0 {
+            scannedCodes[results[0]] = (scannedCodes[results[0]] ?? 0) + 1
+        } else {
+            let group = (tabBarController as! GroupTabBarViewController).group
+            let nCode = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
+            
+            nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
+            nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
+            nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
+            nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
+            nCode?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
+            dataSource.append(nCode!)
+        }
+        
         barcodeList.reloadData()
         scanner.startRunning()
     }
@@ -61,9 +82,11 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
         
         let code = dataSource[indexPath.row]
         
-        cell.textLabel!.text = "\(code.name) [\(code.code)]"
+        let count = scannedCodes[code] ?? 0
         
-        if let _ = scannedCodes[code.code] {
+        cell.textLabel!.text = "\(code.name) [\(code.code)]  - \(count) of \(code.quantity)"
+        
+        if count == Int(code.quantity) {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.None
