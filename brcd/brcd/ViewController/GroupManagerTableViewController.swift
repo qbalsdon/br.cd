@@ -19,7 +19,7 @@ class GroupManagerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.clearsSelectionOnViewWillAppear = true
     }
 
@@ -109,4 +109,6 @@ class GroupManagerTableViewController: UITableViewController {
             nc.group = currentGroup
         }
     }
+    
+    
 }

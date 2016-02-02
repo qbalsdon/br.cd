@@ -14,6 +14,7 @@ class BarcodeListTableViewController: UITableViewController {
     @IBOutlet var barcodeList: UITableView!
     
     var dataSource = [BarcodeEntity]()
+    var currentBarcode: BarcodeEntity! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class BarcodeListTableViewController: UITableViewController {
 
         let code = dataSource[indexPath.row]
         
-        cell.textLabel!.text = "\(code.name) [\(code.code)] x \(code.quantity)"
+        cell.textLabel!.text = "[\(code.code)] x \(code.quantity)"
 
         return cell
     }
@@ -60,5 +61,19 @@ class BarcodeListTableViewController: UITableViewController {
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        currentBarcode = dataSource[indexPath.row]
+        performSegueWithIdentifier("showEditBarcodeSegue", sender: self)
+    }
+    
+    //MARK: - Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        let nc = segue.destinationViewController as! UINavigationController
+        let vc = nc.viewControllers[0] as! BarcodeDataViewController
+        
+        vc.barcode = currentBarcode
     }
 }

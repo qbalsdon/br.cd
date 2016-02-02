@@ -48,20 +48,19 @@ class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObject
     
     func barcodeScanned(code: String, type: String) {
         let results = fetchBarcode(code, type: type)
-        
+        var barcodeEntity: BarcodeEntity? = nil
         if results.count == 0 {
             
-            let nCode = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
+            barcodeEntity = NSEntityDescription.insertNewObjectForEntityForName("BarcodeEntity", inManagedObjectContext: CoreDataStackManager.sharedInstance.managedObjectContext) as? BarcodeEntity
             
-            nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
-            nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
-            nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
-            nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
-            nCode?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
+            barcodeEntity?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
+            barcodeEntity?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
+            barcodeEntity?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
+            barcodeEntity?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
         } else {
-            let entity = results[0]
-            let qty: Int16 = entity.quantity + 1
-            entity.setValue(Int(qty), forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
+            barcodeEntity = results[0]
+            let qty: Int16 = barcodeEntity!.quantity + 1
+            barcodeEntity!.setValue(Int(qty), forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
         }
         
         CoreDataStackManager.sharedInstance.saveContext()
@@ -76,7 +75,7 @@ class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObject
                 self.scannerView.startRunning()
             }
         } else {
-            navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.popViewControllerAnimated(true)            
         }
     }
     

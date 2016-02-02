@@ -57,7 +57,6 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
             
             nCode?.setValue(code, forKey: BarcodeEntity.FIELD.CODE.rawValue)
             nCode?.setValue(type, forKey: BarcodeEntity.FIELD.TYPE.rawValue)
-            nCode?.setValue(false, forKey: BarcodeEntity.FIELD.FAVORITE.rawValue)
             nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
             nCode?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
             dataSource.append(nCode!)
@@ -84,7 +83,7 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
         
         let count = scannedCodes[code] ?? 0
         
-        cell.textLabel!.text = "\(code.name) [\(code.code)]  - \(count) of \(code.quantity)"
+        cell.textLabel!.text = "[\(code.code)]  - \(count) of \(code.quantity)"
         
         if count == Int(code.quantity) {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark

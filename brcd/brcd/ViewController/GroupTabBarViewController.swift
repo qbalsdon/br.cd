@@ -19,7 +19,7 @@ class GroupTabBarViewController: UITabBarController {
 
         let scanSingleItem = UIBarButtonItem(image: UIImage(named: "AddOne"), style: UIBarButtonItemStyle.Plain, target: self, action: "showSingleScanView:")
         let scanManyItem = UIBarButtonItem(image: UIImage(named: "AddMany"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMulipleScanView:")
-        navigationItem.rightBarButtonItems = [scanManyItem, scanSingleItem]
+        navigationItem.rightBarButtonItems = [scanManyItem, scanSingleItem]        
     }
     
     override func didReceiveMemoryWarning() {
