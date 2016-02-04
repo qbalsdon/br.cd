@@ -14,9 +14,7 @@
 		561DD44A1C4BD31000511F38 /* GroupTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */; };
 		561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */; };
 		561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DD44D1C4BDE9500511F38 /* Assets.xcassets */; };
-		561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */; };
 		561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DD4561C4C370500511F38 /* QuartzCore.framework */; };
-		561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4591C4C3AFC00511F38 /* iCarousel.m */; };
 		56412A411C5D0C8A009A8B5B /* UIBarcodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */; };
 		56412A431C5D0CAE009A8B5B /* UIBarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */; };
 		56412A461C5D0F17009A8B5B /* BarcodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A451C5D0F17009A8B5B /* BarcodeScannerDelegate.swift */; };
@@ -46,11 +44,8 @@
 		561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTabBarViewController.swift; path = ViewController/GroupTabBarViewController.swift; sourceTree = "<group>"; };
 		561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeListTableViewController.swift; path = ViewController/BarcodeListTableViewController.swift; sourceTree = "<group>"; };
 		561DD44D1C4BDE9500511F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = brcd/Assets.xcassets; sourceTree = "<group>"; };
-		561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeCarouselViewController.swift; path = ViewController/BarcodeCarouselViewController.swift; sourceTree = "<group>"; };
 		561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "brcd-Bridging-Header.h"; path = "brcd/brcd-Bridging-Header.h"; sourceTree = "<group>"; };
 		561DD4561C4C370500511F38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		561DD4581C4C3AFC00511F38 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = brcd/Frameworks/iCarosel/iCarousel.h; sourceTree = "<group>"; };
-		561DD4591C4C3AFC00511F38 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = brcd/Frameworks/iCarosel/iCarousel.m; sourceTree = "<group>"; };
 		56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIBarcodeScannerView.xib; path = ViewController/Controls/UIBarcodeScannerView.xib; sourceTree = "<group>"; };
 		56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBarcodeScannerView.swift; path = ViewController/Controls/UIBarcodeScannerView.swift; sourceTree = "<group>"; };
 		56412A451C5D0F17009A8B5B /* BarcodeScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeScannerDelegate.swift; path = ViewController/Delegates/BarcodeScannerDelegate.swift; sourceTree = "<group>"; };
@@ -101,19 +96,9 @@
 			children = (
 				561DD4561C4C370500511F38 /* QuartzCore.framework */,
 				561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */,
-				561DD4541C4C352F00511F38 /* iCarosel */,
 				65EF07129596556E173B6B0E /* Pods.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		561DD4541C4C352F00511F38 /* iCarosel */ = {
-			isa = PBXGroup;
-			children = (
-				561DD4581C4C3AFC00511F38 /* iCarousel.h */,
-				561DD4591C4C3AFC00511F38 /* iCarousel.m */,
-			);
-			name = iCarosel;
 			sourceTree = "<group>";
 		};
 		56412A441C5D0EF7009A8B5B /* Delegates */ = {
@@ -169,7 +154,6 @@
 				561DD4411C4BADB800511F38 /* GroupManagerTableViewController.swift */,
 				561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */,
 				561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */,
-				561DD44F1C4BE4C900511F38 /* BarcodeCarouselViewController.swift */,
 				56412A471C5D1384009A8B5B /* CheckListViewController.swift */,
 				56F9C04C1C61270A004DA714 /* BarcodeDataViewController.swift */,
 			);
@@ -350,7 +334,6 @@
 				56412A461C5D0F17009A8B5B /* BarcodeScannerDelegate.swift in Sources */,
 				56BE0A4F1C42D316009E62C2 /* UILoader.swift in Sources */,
 				56F9C04B1C6119B4004DA714 /* AttributeEntity.swift in Sources */,
-				561DD45A1C4C3AFC00511F38 /* iCarousel.m in Sources */,
 				56BE0A471C42C093009E62C2 /* ScanBarcodeViewController.swift in Sources */,
 				56F9C04D1C61270A004DA714 /* BarcodeDataViewController.swift in Sources */,
 				56BE0A371C42C017009E62C2 /* brcd.xcdatamodeld in Sources */,
@@ -358,7 +341,6 @@
 				56BE0A2F1C42C017009E62C2 /* AppDelegate.swift in Sources */,
 				561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */,
 				56F9C0451C6100F9004DA714 /* OutpanAPI.swift in Sources */,
-				561DD4501C4BE4C900511F38 /* BarcodeCarouselViewController.swift in Sources */,
 				561DD4461C4BAEF800511F38 /* GroupEntity.swift in Sources */,
 				561DD4421C4BADB800511F38 /* GroupManagerTableViewController.swift in Sources */,
 			);

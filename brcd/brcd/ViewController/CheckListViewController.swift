@@ -83,7 +83,7 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
         
         let count = scannedCodes[code] ?? 0
         
-        cell.textLabel!.text = "[\(code.code)]  - \(count) of \(code.quantity)"
+        cell.textLabel!.text = "\(count) of \(code.quantity): \(getName(code))"
         
         if count == Int(code.quantity) {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark

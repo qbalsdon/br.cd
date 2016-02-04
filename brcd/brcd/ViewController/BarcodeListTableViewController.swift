@@ -46,7 +46,7 @@ class BarcodeListTableViewController: UITableViewController {
 
         let code = dataSource[indexPath.row]
         
-        cell.textLabel!.text = "[\(code.code)] x \(code.quantity)"
+        cell.textLabel!.text = "\(getName(code)) x \(code.quantity)"
 
         return cell
     }

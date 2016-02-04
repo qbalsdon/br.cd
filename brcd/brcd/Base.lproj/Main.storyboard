@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--br.cd-->
@@ -87,55 +88,6 @@
             </objects>
             <point key="canvasLocation" x="3094" y="132"/>
         </scene>
-        <!--Data Source-->
-        <scene sceneID="h8t-Cc-2M9">
-            <objects>
-                <viewController id="R8P-Tr-bZO" customClass="BarcodeCarouselViewController" customModule="brcd" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nnw-9H-cfo"/>
-                        <viewControllerLayoutGuide type="bottom" id="GXN-ca-pVx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bm7-mk-zND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-eF-uSq" customClass="iCarousel">
-                                <rect key="frame" x="20" y="323" width="560" height="220"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="WJw-uZ-ffX"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="R8P-Tr-bZO" id="JhO-yh-DKW"/>
-                                    <outlet property="delegate" destination="R8P-Tr-bZO" id="wpp-02-CKN"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsb-gX-9ko">
-                                <rect key="frame" x="20" y="294" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gJ3-eF-uSq" firstAttribute="top" secondItem="qsb-gX-9ko" secondAttribute="bottom" constant="8" id="6aj-Cg-l3I"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="qsb-gX-9ko" secondAttribute="leading" id="9cf-Bx-xFL"/>
-                            <constraint firstItem="GXN-ca-pVx" firstAttribute="top" secondItem="gJ3-eF-uSq" secondAttribute="bottom" constant="8" symbolic="YES" id="BES-Dv-Ys2"/>
-                            <constraint firstItem="gJ3-eF-uSq" firstAttribute="leading" secondItem="bm7-mk-zND" secondAttribute="leadingMargin" id="JiV-cs-qvb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qsb-gX-9ko" secondAttribute="trailing" id="sHb-sq-u13"/>
-                            <constraint firstItem="gJ3-eF-uSq" firstAttribute="trailing" secondItem="bm7-mk-zND" secondAttribute="trailingMargin" id="zmv-Bh-B7i"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Carousel" image="TabCarosel" id="2Ry-WJ-DVg"/>
-                    <connections>
-                        <outlet property="barcodeCarousel" destination="gJ3-eF-uSq" id="wSx-BL-iEc"/>
-                        <outlet property="titleLabel" destination="qsb-gX-9ko" id="E7t-zt-m7W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="981-cI-GC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3094" y="803"/>
-        </scene>
         <!--Barcode Data View Controller-->
         <scene sceneID="D5r-QO-Yk3">
             <objects>
@@ -167,25 +119,25 @@
                                 <rect key="frame" x="0.0" y="206" width="600" height="345"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attributeCell" textLabel="3aP-fJ-hnG" detailTextLabel="XhV-k1-Y2V" style="IBUITableViewCellStyleSubtitle" id="hZr-Sb-bbQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attributeCell" textLabel="3aP-fJ-hnG" detailTextLabel="XhV-k1-Y2V" style="IBUITableViewCellStyleValue1" id="hZr-Sb-bbQ">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZr-Sb-bbQ" id="ITJ-Hh-6vB">
-                                            <rect key="frame" x="0.0" y="0.0" width="553" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3aP-fJ-hnG">
-                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XhV-k1-Y2V">
-                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XhV-k1-Y2V">
+                                                    <rect key="frame" x="529" y="12" width="56" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -218,7 +170,18 @@
                                 <action selector="cancelPressed:" destination="Iqh-pc-p4J" id="Xcw-Te-skv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HHc-nH-mrB"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="HHc-nH-mrB">
+                                <connections>
+                                    <action selector="addAttributePressed:" destination="Iqh-pc-p4J" id="Cxf-MS-Qob"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="YEg-Yy-iRO">
+                                <connections>
+                                    <action selector="searchForData:" destination="Iqh-pc-p4J" id="SWh-bZ-mCl"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="attributesTable" destination="oMY-Bb-XF8" id="jHe-Ap-1IA"/>
@@ -293,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wns-3B-u1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3094" y="1535"/>
+            <point key="canvasLocation" x="3094" y="818"/>
         </scene>
         <!--Scan Barcode View Controller-->
         <scene sceneID="ma0-g2-Xqq">
@@ -339,7 +302,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="fBE-t5-Lsn" kind="relationship" relationship="viewControllers" id="3zD-T5-LSO"/>
-                        <segue destination="R8P-Tr-bZO" kind="relationship" relationship="viewControllers" id="8dc-PA-rZb"/>
                         <segue destination="YMZ-dh-xTo" kind="relationship" relationship="viewControllers" id="9Er-tg-nxq"/>
                         <segue destination="F02-6L-oIs" kind="show" identifier="scanCodesSegue" id="VMV-Ku-CUG"/>
                     </connections>
@@ -386,7 +348,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TabCarosel" width="48" height="48"/>
         <image name="TabCheck" width="48" height="48"/>
         <image name="TabList" width="48" height="48"/>
     </resources>

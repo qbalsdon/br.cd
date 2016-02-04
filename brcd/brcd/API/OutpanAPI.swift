@@ -13,10 +13,16 @@ class OutpanAPI: NSObject {
     
     var appId: String!
     
-    let OutpanEndPoint = "https://api.outpan.com/v2/products/{BARCODE}?apikey={KEY}"
+    let OutpanEndPoint = "https://api.outpan.com/v2/products/{BARCODE}{ACTION}?apikey={KEY}"
     
     let POST = "POST"
     let GET = "GET"
+    
+    enum OUTPAN_ACTION:String {
+        case GET = "",
+        ATTRIBUTE = "/attribute",
+        NAME = "/name"
+    }
     
     static let sharedInstance = OutpanAPI()
     
@@ -32,8 +38,8 @@ class OutpanAPI: NSObject {
     }
     
     //MARK: Generic API
-    func apiCall(barcode: String, httpMethod: String!, httpBody: String!, onSuccess: (AnyObject!) -> (), onError: (String, String!) -> ()){
-        let endPoint = OutpanEndPoint.stringByReplacingOccurrencesOfString("{BARCODE}", withString: barcode).stringByReplacingOccurrencesOfString("{KEY}", withString: appId)
+    func apiCall(barcode: String, httpMethod: String!, action: OUTPAN_ACTION, httpBody: String!, onSuccess: (AnyObject!) -> (), onError: (String, String!) -> ()){
+        let endPoint = OutpanEndPoint.stringByReplacingOccurrencesOfString("{BARCODE}", withString: barcode).stringByReplacingOccurrencesOfString("{KEY}", withString: appId).stringByReplacingOccurrencesOfString("{ACTION}", withString: action.rawValue)
         
         let url : NSURL = NSURL(string: endPoint)!
         let request = NSMutableURLRequest(URL: url)
@@ -73,10 +79,26 @@ class OutpanAPI: NSObject {
     
     // MARK: - Method calls
     func getProduct(barcode: String, onSuccess: (ProductEntity!) -> (), onError: (String, String!) -> ()) {
-        OutpanAPI.sharedInstance.apiCall(barcode, httpMethod: GET, httpBody: nil, onSuccess: {
+        OutpanAPI.sharedInstance.apiCall(barcode, httpMethod: GET, action: OUTPAN_ACTION.GET, httpBody: nil, onSuccess: {
             data in
                 self.parseProduct(data, onSuccess: onSuccess, onError: onError)
             }, onError: onError)
+    }
+    
+    func saveProductAttribute(barcode: String, attributeName: String, attributeValue: String,  onSuccess: () -> (), onError: (String, String!) -> ()) {
+        let body = "name=\(attributeName)&value=\(attributeValue)"
+        
+        OutpanAPI.sharedInstance.apiCall(barcode, httpMethod: POST, action: OUTPAN_ACTION.ATTRIBUTE, httpBody: body, onSuccess: { data in
+            self.parseResponse(data, onSuccess: onSuccess, onError: onError)
+            }, onError: onError)
+    }
+    
+    func saveProductName(barcode: String, name: String,  onSuccess: (ProductEntity!) -> (), onError: (String, String!) -> ()) {
+        let body = "name=\(name)"
+        
+        OutpanAPI.sharedInstance.apiCall(barcode, httpMethod: POST, action: OUTPAN_ACTION.NAME, httpBody: body, onSuccess: { data in
+            self.parseProduct(data, onSuccess: onSuccess, onError: onError)
+            }, onError: onError)            
     }
     
     // MARK: - Data parsing methods
@@ -96,5 +118,13 @@ class OutpanAPI: NSObject {
             return
         }
         onError("Invalid / Empty data", "\(parsedResult)")
+    }
+    
+    func parseResponse(parsedResult: AnyObject!, onSuccess: () -> (), onError: (String, String) -> ()) {
+        if let error = parsedResult.valueForKey("error") as? NSDictionary {
+            onError(error.valueForKey("code") as! String, error.valueForKey("message") as! String)
+        } else {
+            onSuccess()
+        }
     }
 }

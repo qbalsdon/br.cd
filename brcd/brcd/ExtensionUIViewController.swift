@@ -53,6 +53,18 @@ extension UIViewController {
 
     }
     
+    func showMessage(title: String, message: String, cancelButtonText: String, actionButton: String, actionEvent: ((UIAlertAction) -> Void)?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: cancelButtonText, style: .Cancel,handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: actionButton, style: .Default, handler: actionEvent)
+        alertController.addAction(OKAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - Data helpers
     func fetchAllGroups() -> [GroupEntity] {
         let fetchRequest = NSFetchRequest(entityName: GroupEntity.NAME)
@@ -99,6 +111,14 @@ extension UIViewController {
         } catch let error as NSError {
             print("Error fetching groups: \(error)")
             return [BarcodeEntity]()
+        }
+    }
+    
+    func getName(entity: BarcodeEntity) -> String {
+        if entity.product == nil || entity.product?.name == nil {
+            return entity.code
+        } else {
+            return (entity.product?.name)!
         }
     }
 }

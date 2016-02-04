@@ -9,6 +9,4 @@
 #ifndef brcd_Bridging_Header_h
 #define brcd_Bridging_Header_h
 
-#import "Frameworks/iCarosel/iCarousel.h"
-
 #endif /* brcd_Bridging_Header_h */
