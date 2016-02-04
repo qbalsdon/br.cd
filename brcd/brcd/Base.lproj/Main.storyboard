@@ -348,7 +348,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TabCheck" width="48" height="48"/>
-        <image name="TabList" width="48" height="48"/>
+        <image name="TabCheck" width="38" height="38"/>
+        <image name="TabList" width="38" height="38"/>
     </resources>
 </document>

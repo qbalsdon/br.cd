@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XeJ-T8-A0Z">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright Quintin Balsdon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA1-jc-gju">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kp8-rK-fs1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XeJ-T8-A0Z" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="5ie-ai-gmY"/>
+                            <constraint firstItem="ZA1-jc-gju" firstAttribute="top" secondItem="XeJ-T8-A0Z" secondAttribute="bottom" constant="-41" id="IFp-fV-R7H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XeJ-T8-A0Z" secondAttribute="trailing" id="TkR-OL-NgU"/>
+                            <constraint firstItem="ZA1-jc-gju" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="bgi-re-l6L"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="XeJ-T8-A0Z" secondAttribute="bottom" id="gjn-4E-oqy"/>
+                            <constraint firstItem="ZA1-jc-gju" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="jFC-mB-rft"/>
+                            <constraint firstItem="XeJ-T8-A0Z" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="rbm-zJ-tN0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +48,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="400" height="265"/>
+    </resources>
 </document>

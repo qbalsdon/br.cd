@@ -88,6 +88,18 @@ class GroupManagerTableViewController: UITableViewController {
         if editingStyle == .Delete {
             let deleted = dataSource[indexPath.row]
             
+            for code in deleted.codes {
+                if code.product != nil && code.product?.attributes != nil {
+                    for attribute in (code.product?.attributes)! {
+                        CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(attribute)
+                    }
+                }
+                if let prod = code.product {
+                    CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(prod)
+                }
+                CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(code)
+            }
+            
             CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(deleted)
             CoreDataStackManager.sharedInstance.saveContext()
             dataSource.removeAtIndex(indexPath.row)

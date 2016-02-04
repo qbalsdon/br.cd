@@ -13,7 +13,6 @@
 		561DD4481C4BB2A100511F38 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4471C4BB2A100511F38 /* CoreDataStackManager.swift */; };
 		561DD44A1C4BD31000511F38 /* GroupTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */; };
 		561DD44C1C4BD60E00511F38 /* BarcodeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */; };
-		561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DD44D1C4BDE9500511F38 /* Assets.xcassets */; };
 		561DD4571C4C370500511F38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DD4561C4C370500511F38 /* QuartzCore.framework */; };
 		56412A411C5D0C8A009A8B5B /* UIBarcodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */; };
 		56412A431C5D0CAE009A8B5B /* UIBarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56412A421C5D0CAE009A8B5B /* UIBarcodeScannerView.swift */; };
@@ -32,6 +31,7 @@
 		56F9C0491C6103E2004DA714 /* ProductEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F9C0481C6103E2004DA714 /* ProductEntity.swift */; };
 		56F9C04B1C6119B4004DA714 /* AttributeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F9C04A1C6119B4004DA714 /* AttributeEntity.swift */; };
 		56F9C04D1C61270A004DA714 /* BarcodeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F9C04C1C61270A004DA714 /* BarcodeDataViewController.swift */; };
+		56F9C0511C63FAC6004DA714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F9C0501C63FAC6004DA714 /* Assets.xcassets */; };
 		73534823313B5DB643AC4C03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EF07129596556E173B6B0E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,6 @@
 		561DD4471C4BB2A100511F38 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStackManager.swift; path = Model/CoreDataStackManager.swift; sourceTree = "<group>"; };
 		561DD4491C4BD31000511F38 /* GroupTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTabBarViewController.swift; path = ViewController/GroupTabBarViewController.swift; sourceTree = "<group>"; };
 		561DD44B1C4BD60E00511F38 /* BarcodeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeListTableViewController.swift; path = ViewController/BarcodeListTableViewController.swift; sourceTree = "<group>"; };
-		561DD44D1C4BDE9500511F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = brcd/Assets.xcassets; sourceTree = "<group>"; };
 		561DD4551C4C361A00511F38 /* brcd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "brcd-Bridging-Header.h"; path = "brcd/brcd-Bridging-Header.h"; sourceTree = "<group>"; };
 		561DD4561C4C370500511F38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		56412A401C5D0C8A009A8B5B /* UIBarcodeScannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIBarcodeScannerView.xib; path = ViewController/Controls/UIBarcodeScannerView.xib; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		56F9C0481C6103E2004DA714 /* ProductEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductEntity.swift; path = Model/ProductEntity.swift; sourceTree = "<group>"; };
 		56F9C04A1C6119B4004DA714 /* AttributeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributeEntity.swift; path = Model/AttributeEntity.swift; sourceTree = "<group>"; };
 		56F9C04C1C61270A004DA714 /* BarcodeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeDataViewController.swift; path = ViewController/BarcodeDataViewController.swift; sourceTree = "<group>"; };
+		56F9C0501C63FAC6004DA714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = brcd/Assets.xcassets; sourceTree = "<group>"; };
 		65EF07129596556E173B6B0E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6177CF1FC7BC5904C98F30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,9 +112,9 @@
 		56BE0A221C42C017009E62C2 = {
 			isa = PBXGroup;
 			children = (
+				56F9C0501C63FAC6004DA714 /* Assets.xcassets */,
 				56F9C0461C6101C3004DA714 /* ApiKey.plist */,
 				561DD4531C4C352600511F38 /* Frameworks */,
-				561DD44D1C4BDE9500511F38 /* Assets.xcassets */,
 				56BE0A2D1C42C017009E62C2 /* brcd */,
 				56BE0A2C1C42C017009E62C2 /* Products */,
 				41B6DABF18CAACE833CB39BA /* Pods */,
@@ -263,9 +263,9 @@
 			files = (
 				56BE0A3C1C42C017009E62C2 /* LaunchScreen.storyboard in Resources */,
 				56BE0A4D1C42D1A4009E62C2 /* UILoader.xib in Resources */,
-				561DD44E1C4BDE9500511F38 /* Assets.xcassets in Resources */,
 				56F9C0471C6101C3004DA714 /* ApiKey.plist in Resources */,
 				56412A411C5D0C8A009A8B5B /* UIBarcodeScannerView.xib in Resources */,
+				56F9C0511C63FAC6004DA714 /* Assets.xcassets in Resources */,
 				56BE0A341C42C017009E62C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

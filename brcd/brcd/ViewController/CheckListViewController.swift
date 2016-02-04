@@ -60,6 +60,7 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
             nCode?.setValue(group, forKey: BarcodeEntity.FIELD.GROUP.rawValue)
             nCode?.setValue(1, forKey: BarcodeEntity.FIELD.QUANTITY.rawValue)
             dataSource.append(nCode!)
+            CoreDataStackManager.sharedInstance.saveContext()
         }
         
         barcodeList.reloadData()

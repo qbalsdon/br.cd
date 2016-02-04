@@ -55,6 +55,15 @@ class BarcodeListTableViewController: UITableViewController {
         if editingStyle == .Delete {
             let deleted = dataSource[indexPath.row]
             
+            if deleted.product != nil && deleted.product?.attributes != nil {
+                for attribute in (deleted.product?.attributes)! {
+                    CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(attribute)
+                }
+            }
+            if let prod = deleted.product {
+                CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(prod)
+            }
+
             CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(deleted)
             CoreDataStackManager.sharedInstance.saveContext()
             dataSource.removeAtIndex(indexPath.row)

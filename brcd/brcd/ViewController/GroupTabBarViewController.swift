@@ -16,8 +16,7 @@ class GroupTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        let scanSingleItem = UIBarButtonItem(image: UIImage(named: "AddOne"), style: UIBarButtonItemStyle.Plain, target: self, action: "showSingleScanView:")
+        let scanSingleItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "showSingleScanView:")
         let scanManyItem = UIBarButtonItem(image: UIImage(named: "AddMany"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMulipleScanView:")
         navigationItem.rightBarButtonItems = [scanManyItem, scanSingleItem]        
     }
