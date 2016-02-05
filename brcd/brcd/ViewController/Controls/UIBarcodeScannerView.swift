@@ -57,13 +57,18 @@ class UIBarcodeScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
+            if delegate != nil {
+                delegate.failed()
+            }
             return
         }
         
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
         } else {
-            delegate.failed();
+            if delegate != nil {
+                delegate.failed()
+            }
             return;
         }
         

@@ -25,7 +25,9 @@ class ScanBarcodeViewController: UIViewController, AVCaptureMetadataOutputObject
     }
     
     override func viewDidLayoutSubviews() {
-        scannerView.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
+        if scannerView != nil && scannerView.previewLayer != nil {
+            scannerView.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
+        }
     }
     
     func failed() {

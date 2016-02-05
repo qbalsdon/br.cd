@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Foundation
+import AVFoundation
 
 extension UIViewController {
     func onWebError(error: NSError!) {
@@ -120,5 +121,15 @@ extension UIViewController {
         } else {
             return (entity.product?.name)!
         }
+    }
+    
+    func hasCamera() -> Bool {
+        if AVCaptureDevice.devices().count == 0 {
+            let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+            return false
+        }
+        return true
     }
 }

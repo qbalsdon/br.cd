@@ -29,13 +29,17 @@ class GroupTabBarViewController: UITabBarController {
     // MARK: - Navigation
 
     func showSingleScanView(sender: AnyObject!) {
-        burst = false
-        performSegueWithIdentifier("scanCodesSegue", sender: sender)
+        if hasCamera() {
+            burst = false
+            performSegueWithIdentifier("scanCodesSegue", sender: sender)
+        }
     }
     
     func showMulipleScanView(sender: AnyObject!) {
-        burst = true
-        performSegueWithIdentifier("scanCodesSegue", sender: sender)
+        if hasCamera() {
+            burst = true
+            performSegueWithIdentifier("scanCodesSegue", sender: sender)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

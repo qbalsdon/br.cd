@@ -19,15 +19,18 @@ class CheckListViewController: UIViewController, BarcodeScannerDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         scanner.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
-        scanner.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
+        if scanner != nil && scanner.previewLayer != nil {
+            scanner.previewLayer.frame = CGRectMake(0, 0, view.frame.width + 5, view.frame.size.height)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
+        hasCamera()
+        
         dataSource = fetchAllBarcodes((tabBarController as! GroupTabBarViewController).group)
         barcodeList.reloadData()
         view.bringSubviewToFront(barcodeList)

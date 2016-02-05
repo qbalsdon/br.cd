@@ -7,6 +7,59 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="VZf-Kd-z1n">
+            <objects>
+                <viewController id="u5L-kY-pxB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xfe-ls-IRM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eyn-wq-EGQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FxH-YK-gHk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About br.cd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-XN-B7l">
+                                <rect key="frame" x="20" y="64" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kgQ-kg-Ez6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-d0-pGi">
+                                <rect key="frame" x="20" y="112" width="560" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">The 5th and final project for my Udacious Udacity Nanodegree! 
+
+Please note that since this app uses the device camera, it cannot be run in a simulator.
+
+The aim of the project is to allow user to scan barcodes and store them in groups. Each group is managed by scanning codes individually or in batches. You can remove barcode groups and barcodes from the app by swiping on the lists with white backgrounds
+
+Each barcode group has a quantity (the number of times the same code of the same type has been scanned). You can also view the barcode information by tapping on the barcode in the "List" view. You can download the barcode information from Outpan, and if it does not exist, add the name and attributes. If the barcode exists on Outpan, you can add attributes. You cannot add attributes to a barcode that is not on Outpan.
+
+In the "Check list" view, items are scanned and check off when the right barcode has been scanned the correct amount of times. If you scan a new item in this list mode, it will be automatically added to the group.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kbl-d0-pGi" firstAttribute="trailing" secondItem="FxH-YK-gHk" secondAttribute="trailingMargin" id="L6S-eb-fro"/>
+                            <constraint firstItem="eyn-wq-EGQ" firstAttribute="top" secondItem="Kbl-d0-pGi" secondAttribute="bottom" constant="20" id="Nj8-TO-mVM"/>
+                            <constraint firstItem="Kbl-d0-pGi" firstAttribute="leading" secondItem="FxH-YK-gHk" secondAttribute="leadingMargin" id="T14-KO-xzI"/>
+                            <constraint firstItem="7Rg-XN-B7l" firstAttribute="top" secondItem="xfe-ls-IRM" secondAttribute="bottom" id="gnn-5U-Be5"/>
+                            <constraint firstItem="7Rg-XN-B7l" firstAttribute="leading" secondItem="FxH-YK-gHk" secondAttribute="leadingMargin" id="omA-Di-mLb"/>
+                            <constraint firstItem="Kbl-d0-pGi" firstAttribute="top" secondItem="7Rg-XN-B7l" secondAttribute="bottom" constant="8" id="opX-67-2vV"/>
+                            <constraint firstItem="7Rg-XN-B7l" firstAttribute="trailing" secondItem="FxH-YK-gHk" secondAttribute="trailingMargin" id="x1l-dG-Au6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oR7-fK-DO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="-287"/>
+        </scene>
         <!--br.cd-->
         <scene sceneID="W7r-XG-bQs">
             <objects>
@@ -40,6 +93,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="br.cd" id="AyQ-7E-dhF">
+                        <barButtonItem key="leftBarButtonItem" image="info" id="sHU-pD-enG">
+                            <connections>
+                                <segue destination="u5L-kY-pxB" kind="show" id="3Ud-xd-Ra5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add group" id="wIY-Or-sdy">
                             <connections>
                                 <action selector="addGroupButtonPressed:" destination="7DB-Id-mEf" id="YfX-zg-4tm"/>
@@ -350,5 +408,6 @@
     <resources>
         <image name="TabCheck" width="38" height="38"/>
         <image name="TabList" width="38" height="38"/>
+        <image name="info" width="25" height="25"/>
     </resources>
 </document>
